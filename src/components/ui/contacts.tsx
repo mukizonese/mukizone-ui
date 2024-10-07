@@ -1,7 +1,7 @@
 "use client";
 import { Github, Mail, Twitter } from "lucide-react";
 import Link from "next/link";
-import { ContactCard } from "@/components/ui/contactcard";
+import { ContactCard } from "../../components/ui/contactcard";
 
 const socials = [
 	{

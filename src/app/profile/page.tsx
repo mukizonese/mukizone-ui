@@ -1,8 +1,7 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
-import { Footer } from "@/components/ui/footer"
-import { Back } from "@/components/ui/back"
+
+import { Footer } from "../../components/ui/footer"
+import { Back } from "../../components/ui/back"
 
 export default function Home() {
   return (

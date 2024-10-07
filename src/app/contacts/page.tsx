@@ -1,8 +1,9 @@
 "use client";
-import Image from "next/image";
+
 import { Contacts } from "@/components/ui/contacts";
-import { Back } from "@/components/ui/back"
-import { Footer } from "@/components/ui/footer"
+//import { Contacts } from "../../components/ui/contacts";
+import { Back } from "../../components/ui/back"
+import { Footer } from "../../components/ui/footer"
 
 export default function ContactsHome() {
   return (

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Footer } from "@/components/ui/footer"
+import { Footer } from "../components/ui/footer"
 
 export default function Home() {
   return (
