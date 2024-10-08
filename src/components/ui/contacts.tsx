@@ -1,14 +1,14 @@
 "use client";
-import { Github, Mail, Twitter } from "lucide-react";
+import { Github, Mail, Twitter, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { ContactCard } from "../../components/ui/contactcard";
 
 const socials = [
 	{
-		icon: <Twitter size={20} />,
-		href: "https://twitter.com/mukizone",
-		label: "Twitter",
-		handle: "@mukizone",
+		icon: <Linkedin size={20} />,
+		href: "https://www.linkedin.com/in/mukeshvast/",
+		label: "LinkedIn",
+		handle: "@mukeshvast",
 	},
 	{
 		icon: <Mail size={20} />,
@@ -21,7 +21,7 @@ const socials = [
 		href: "https://github.com/mukizonese",
 		label: "Github",
 		handle: "mukizonese",
-	},
+	}
 ];
 
 export default function Contacts() {
@@ -42,10 +42,10 @@ export default function Contacts() {
 									{s.icon}
 								</span>{" "}
 								<div className="z-10 flex flex-col items-center">
-									<span className="lg:text-xl font-medium duration-150 xl:text-3xl text-zinc-200 group-hover:text-white font-display">
+									<span className="lg:text-xl font-medium duration-150 xl:text-1xl text-zinc-500 group-hover:text-black font-display">
 										{s.handle}
 									</span>
-									<span className="mt-4 text-sm text-center duration-1000 text-zinc-400 group-hover:text-zinc-200">
+									<span className="mt-4 text-sm text-center duration-1000 text-zinc-500 group-hover:black">
 										{s.label}
 									</span>
 								</div>
