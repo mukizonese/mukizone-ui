@@ -11,6 +11,8 @@ export default function Home() {
         </h1>
 
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+          <li>This page that is created for learning purposes.</li>
+          <li>Created Oct 1, 2024.</li>
           <li>Work In Progress.</li>
         </ol>
 

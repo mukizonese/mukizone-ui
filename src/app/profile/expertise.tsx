@@ -12,14 +12,14 @@ const expertise = [
 	{
 		card_title: "Container and Cloud" ,
 		card_description: "Card Desc",
-		card_contents: ["AWS", "DOCKER"],
-		card_footer: "Card Footer"
+		card_contents: ["AWS", "Docker"],
+		card_footer: "This website is hosted on AWS(ap-south-1). Webcontainer is a Docker Container pulled from AWS ECR."
 	},
 	{
         card_title: "Frontend Developer" ,
         card_description: "Card Desc",
         card_contents: ["Next JS", "React", "Vaadin"],
-        card_footer: "Card Footer"
+        card_footer: "This website is a Next JS stand-alone app over Nginx reverse proxy."
     },
     {
         card_title: "Backend Developer" ,
