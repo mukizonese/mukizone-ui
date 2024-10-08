@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  mukizone-ui:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mukizone-ui:latest
+    container_name: mukizone-ui
+    ports:
+      - "3000:3000"
+    restart: always
+  nginx:
+    build:
+      context: ./.nginx
+      dockerfile: Dockerfile
+    image: nginx:latest
+    container_name: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /etc/ssl:/etc/nginx/ssl:ro
+    restart: always
+
+
