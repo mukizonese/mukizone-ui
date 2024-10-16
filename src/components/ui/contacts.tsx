@@ -2,21 +2,25 @@
 import { Github, Mail, Twitter, Linkedin } from "lucide-react";
 import Link from "next/link";
 import { ContactCard } from "../../components/ui/contactcard";
+import * as React from "react"
 
 const socials = [
 	{
+		id: 1,
 		icon: <Linkedin size={20} />,
 		href: "https://www.linkedin.com/in/mukeshvast/",
 		label: "LinkedIn",
 		handle: "@mukeshvast",
 	},
 	{
+		id: 2,
 		icon: <Mail size={20} />,
 		href: "mailto:mukesh.vast.se@gmail.com",
 		label: "Email",
 		handle: "mukesh.vast.se@gmail.com",
 	},
 	{
+		id: 3,
 		icon: <Github size={20} />,
 		href: "https://github.com/mukizonese",
 		label: "Github",
@@ -26,8 +30,10 @@ const socials = [
 
 export default function Contacts() {
 	return (
-				<div className="grid w-full grid-cols-1 gap-8 mx-auto mt-32 sm:mt-0 sm:grid-cols-3 lg:gap-8">
+				<div className="grid  grid-cols-3 ">
 					{socials.map((s) => (
+
+                    <React.Fragment key={s.id}>
 						<ContactCard>
 							<Link
 								href={s.href}
@@ -51,6 +57,9 @@ export default function Contacts() {
 								</div>
 							</Link>
 						</ContactCard>
+
+                    </React.Fragment>
+
 					))}
 				</div>
 	);

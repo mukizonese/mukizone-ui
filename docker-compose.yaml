@@ -4,7 +4,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: mukizone-ui:latest
+    image: mukizone-ui-image:latest
     container_name: mukizone-ui
     ports:
       - "3000:3000"
@@ -13,7 +13,7 @@ services:
     build:
       context: ./.nginx
       dockerfile: Dockerfile
-    image: nginx:latest
+    image: nginx-image:latest
     container_name: nginx
     ports:
       - "80:80"

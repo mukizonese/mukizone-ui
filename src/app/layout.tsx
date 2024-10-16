@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ui/theme-provider"
+import { ThemeSwitch } from "@/components/ui/theme-switch"
+
+import { Back } from "@/components/ui/back"
+import { Footer } from "@/components/ui/footer"
+
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -24,12 +30,38 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <html lang="en" suppressHydrationWarning>
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased `}
+          >
+            <ThemeProvider
+                        attribute="class"
+                        defaultTheme="system"
+                        enableSystem
+                        disableTransitionOnChange
+                      >
+
+
+                          <div className="mx-auto max-w-9xl space-y-8 px-2 pt-20 lg:px-16 lg:py-2 ">
+
+                              <div className="grid  grid-cols-2">
+                                <div><ThemeSwitch/></div>
+
+                              </div>
+
+                                <div className="rounded-lg bg-vc-border-gradient p-px ">
+                                  <div className="rounded-lg p-3.5 lg:p-6">{children}</div>
+                                </div>
+
+                              <div className="grid  grid-cols-2">
+                                <div><Back/></div>
+                                <div><Footer/></div>
+                              </div>
+
+                              </div>
+
+            </ThemeProvider>
+          </body>
+        </html>
   );
 }

@@ -1,17 +1,39 @@
+"use client";
 import Image from "next/image";
-import { Footer } from "../components/ui/footer"
+import { motion } from "framer-motion";
+
+function Framer() {
+  return (
+    <motion.div
+          animate={{
+                scale: [1, 2, 2, 1, 1],
+                rotate: [0, 0, 70, 70, 0],
+                borderRadius: ["20%", "20%", "50%", "50%", "20%"],
+              }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+        >
+         <Image
+             className="dark:invert"
+             src="/icons/mukizone-com.svg"
+             alt="MukiZone"
+             width={500}
+             height={200}
+             priority
+           />
+        </motion.div>
+  );
+}
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)] bg-blue-100">
+    <div className="grid grid-flow-row auto-rows-max items-center justify-items-center font-[family-name:var(--font-geist-sans)] bg-blue-100">
       <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
 
-        <h1 className="py-3.5 px-0.5 z-10 text-4xl text-transparent duration-1000 bg-black cursor-default text-edge-outline animate-title font-display sm:text-6xl md:text-9xl whitespace-nowrap bg-clip-text ">
-        MukiZone
-        </h1>
+        {Framer()}
 
         <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li>This page that is created for learning purposes.</li>
+          <li>This page is created for learning purposes.</li>
           <li>Created Oct 1, 2024.</li>
           <li>Work In Progress.</li>
         </ol>
@@ -23,13 +45,6 @@ export default function Home() {
             target="_self"
             rel="noopener noreferrer"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
             Profile
           </a>
           <a
@@ -52,8 +67,6 @@ export default function Home() {
 
         </div>
       </main>
-
-      <Footer/>
 
     </div>
   );
