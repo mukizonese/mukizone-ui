@@ -8,8 +8,8 @@ RUN rm /etc/nginx/conf.d/*
 # *.conf files in conf.d/ dir get included in main config
 COPY ./nginx.conf /etc/nginx/conf.d/
 
-COPY ./mukizone_local_ssl.crt /etc/nginx/ssl/mukizone_local_ssl.crt
-COPY ./mukizone_local_ssl.key /etc/nginx/ssl/mukizone_local_ssl.key
+COPY ./fullchain3.pem /etc/nginx/ssl/fullchain.pem
+COPY ./privkey3.pem /etc/nginx/ssl/privkey.pem
 
 # Expose the listening port
 EXPOSE 80
