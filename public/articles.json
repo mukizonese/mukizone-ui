@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "title": "Building a Scalable and Open-Source Data Lake End to End Architecture  :",
+    "link": "https://levelup.gitconnected.com/building-a-scalable-and-open-source-data-lake-end-to-end-architecture-235ba920084e?source=rss-469281ebde2e------2",
+    "description": "MySql > Debezium > Kafka > Spark > Minio > Trino > Streamlit\nContinue reading on Level Up Coding »",
+    "date": "Thu, 06 Mar 2025 18:25:44 GMT",
+    "content": "Full article not found."
+  },
+  {
+    "id": 2,
+    "title": "Data Lake Architectures 2025",
+    "link": "https://medium.com/@mukesh.vast/data-lake-architectures-2025-a735f6c6cdae?source=rss-469281ebde2e------2",
+    "description": "Ingestion, Storage, Processing, Governance, Consumption\nContinue reading on Medium »",
+    "date": "Thu, 06 Mar 2025 14:59:38 GMT",
+    "content": "Full article not found."
+  },
+  {
+    "id": 3,
+    "title": "The Journey of Building a Tracker with OpenAI ChatGPT — A Developer’s Experience",
+    "link": "https://medium.com/@mukesh.vast/the-journey-of-building-a-tracker-with-openai-chatgpt-a-developers-experience-ead87ba55679?source=rss-469281ebde2e------2",
+    "description": "A Simple Idea, A Complex Journey\nContinue reading on Medium »",
+    "date": "Tue, 18 Feb 2025 08:11:06 GMT",
+    "content": "Full article not found."
+  },
+  {
+    "id": 4,
+    "title": "Building a basic Tracker with Python FastAPI, PostgreSQL and ViteJS + React",
+    "link": "https://medium.com/@mukesh.vast/building-a-basic-tracker-with-python-fastapi-postgresql-and-vitejs-react-1154728b32e0?source=rss-469281ebde2e------2",
+    "description": "Spin up a tracker in no time.\nContinue reading on Medium »",
+    "date": "Tue, 18 Feb 2025 08:02:50 GMT",
+    "content": "Full article not found."
+  },
+  {
+    "id": 5,
+    "title": "Building a basic Trading application on AWS with Redis Cache",
+    "link": "https://blog.devops.dev/building-a-basic-trading-application-on-aws-with-redis-cache-f70648bc3779?source=rss-469281ebde2e------2",
+    "description": "Background\nContinue reading on DevOps.dev »",
+    "date": "Sat, 18 Jan 2025 16:56:57 GMT",
+    "content": "Full article not found."
+  }
+]
