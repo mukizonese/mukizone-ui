@@ -1,149 +1,81 @@
 "use client";
+import { FiLinkedin, FiMail, FiGithub } from "react-icons/fi";
+import { FaMedium } from "react-icons/fa"; // Medium Icon
 
-import { useState, useEffect } from 'react';
-import { FiLinkedin, FiMail, FiGithub } from 'react-icons/fi';
-import styled from 'styled-components';
-
-
-// Update your socials array to use Fi icons:
 const socials = [
   {
     id: 1,
-    icon: <FiLinkedin size={20} />,  // Changed from Linkedin to FiLinkedin
+    icon: <FiLinkedin size={24} />,
     href: "https://www.linkedin.com/in/mukeshvast/",
     label: "LinkedIn",
     handle: "@mukeshvast",
   },
   {
     id: 2,
-    icon: <FiMail size={20} />,  // Changed from Mail to FiMail
+    icon: <FiMail size={24} />,
     href: "mailto:mukesh.vast.se@gmail.com",
     label: "Email",
     handle: "mukesh.vast.se@gmail.com",
   },
   {
     id: 3,
-    icon: <FiGithub size={20} />,  // Changed from Github to FiGithub
+    icon: <FiGithub size={24} />,
     href: "https://github.com/mukizonese",
-    label: "Github",
+    label: "GitHub",
     handle: "mukizonese",
+  },
+  {
+    id: 4,
+    icon: <FaMedium size={24} />,
+    href: "https://medium.com/@mukesh.vast",
+    label: "Medium",
+    handle: "@mukesh.vast",
   }
 ];
 
-const Container = styled.div`
-  min-height: 100vh;
-  background-color: #f8f9fa; // Light background
-  color: #495057;
-  font-family: 'Inter', sans-serif;
-  padding: 4rem 2rem;
-`;
-
-const Section = styled.section`
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 4rem 0;
-`;
-
-const SocialGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-`;
-
-const SocialCard = styled.a`
-  display: flex;
-  align-items: center;
-  padding: 2rem;
-  background-color: #ffffff;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  text-decoration: none;
-  color: #495057;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-  }
-
-  svg {
-    color: #1864ab; // Navy blue accent
-    margin-right: 1.5rem;
-    flex-shrink: 0;
-  }
-`;
-
-const SectionTitle = styled.h2`
-  font-size: 2rem;
-  color: #212529;
-  margin-bottom: 2rem;
-  font-weight: 600;
-
-  &::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 3px;
-    background-color: #1864ab;
-    margin-top: 1rem;
-  }
-`;
-
-const ProfileHeader = styled.div`
-  text-align: center;
-  margin-bottom: 4rem;
-
-  h1 {
-    font-size: 2.5rem;
-    color: #212529;
-    margin-bottom: 1rem;
-    font-weight: 700;
-  }
-
-  p {
-    font-size: 1.25rem;
-    max-width: 600px;
-    margin: 0 auto;
-    color: #6c757d;
-  }
-`;
-
 export default function ProfessionalPage() {
   return (
-    <Container>
-      <ProfileHeader>
-        <h1>Mukesh Vast</h1>
-        <p>Full Stack Developer | Building Scalable Enterprise Solutions</p>
-      </ProfileHeader>
+    <div className="min-h-fit flex flex-col items-center justify-center px-6
+      bg-gradient-to-b from-blue-100 to-indigo-50 dark:from-gray-900 dark:to-gray-800
+      text-gray-900 dark:text-gray-200 font-[family-name:var(--font-geist-sans)] transition-all duration-300"
+    >
 
-      <Section>
-        <SectionTitle>Get in Touch</SectionTitle>
-        <SocialGrid>
+      <div className="text-center py-10">
+        <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white drop-shadow-lg">
+          Mukesh Vast
+        </h1>
+        <p className="text-lg text-gray-700 dark:text-gray-300 mt-2">
+          Full Stack Developer | Building Scalable Enterprise Solutions
+        </p>
+      </div>
+
+      <section className="px-6 py-10">
+        <h2 className="text-3xl font-semibold text-gray-900 dark:text-white mb-6 text-center">
+          Get in Touch
+          <div className="w-16 h-1 bg-blue-500 mx-auto mt-2"></div>
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 justify-center">
           {socials.map((social) => (
-            <SocialCard
+            <a
               key={social.id}
               href={social.href}
               target="_blank"
               rel="noopener noreferrer"
+              className="bg-white dark:bg-gray-800 p-5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300
+              border border-blue-300 dark:border-gray-700 hover:border-blue-500 flex items-center space-x-4"
             >
-              {social.icon}
+              <div className="text-blue-600 dark:text-gray-300">{social.icon}</div>
               <div>
-                <h3 style={{
-                  color: '#212529',
-                  margin: '0 0 0.5rem',
-                  fontSize: '1.25rem',
-                  fontWeight: 500
-                }}>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                   {social.label}
                 </h3>
-                <p style={{ margin: 0, color: '#6c757d' }}>{social.handle}</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">{social.handle}</p>
               </div>
-            </SocialCard>
+            </a>
           ))}
-        </SocialGrid>
-      </Section>
-
-    </Container>
+        </div>
+      </section>
+    </div>
   );
 }

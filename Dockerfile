@@ -8,7 +8,8 @@ RUN apk add --no-cache libc6-compat git
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN corepack enable
-RUN corepack prepare pnpm@latest --activate
+#RUN corepack prepare pnpm@latest --activate
+RUN corepack prepare pnpm@9.15.4 --activate
 
 WORKDIR /app
 
@@ -19,7 +20,8 @@ RUN pnpm install --frozen-lockfile --prefer-frozen-lockfile
 FROM base AS builder
 
 RUN corepack enable
-RUN corepack prepare pnpm@latest --activate
+#RUN corepack prepare pnpm@latest --activate
+RUN corepack prepare pnpm@9.15.4 --activate
 
 WORKDIR /app
 

@@ -50,8 +50,11 @@ export default function Home() {
 
 
   return (
-    <div className="bg-gradient-to-b from-blue-100 to-indigo-50 font-[family-name:var(--font-geist-sans)]">
-
+    /* <div className="bg-gradient-to-b from-blue-100 to-indigo-50 font-[family-name:var(--font-geist-sans)]"> */
+    <div className="min-h-fit flex flex-col items-center justify-center px-6
+      bg-gradient-to-b from-blue-100 to-indigo-50 dark:from-gray-900 dark:to-gray-800
+      text-gray-900 dark:text-gray-200 font-[family-name:var(--font-geist-sans)] transition-all duration-300"
+    >
       <main className="container mx-auto px-2 py-2">
         <motion.div
           initial="hidden"
@@ -116,7 +119,7 @@ export default function Home() {
               variants={staggerItems}
               className="flex flex-wrap gap-4"
             >
-              {['Profile', 'TradeDemo', 'Contacts'].map((btn, index) => (
+              {['Profile', 'TradeDemo', 'Blogs', 'Contacts'].map((btn, index) => (
                 <motion.a
                   key={index}
                   variants={itemAnimation}
@@ -188,7 +191,7 @@ export default function Home() {
                      </div>
                      <p className="text-gray-600">Include hands-on demos, code snippets, or live previews of applications.</p>
                      <div className="mt-4 flex flex-wrap gap-2">
-                       {['Python', 'Kafka Connect', 'Spark Streaming', 'Redis', 'Next.js'].map((tech) => (
+                       {['Python', 'Kafka', 'Redis', 'Next.js'].map((tech) => (
                          <span key={tech} className="px-3 py-1 text-sm rounded-full bg-purple-50 text-purple-700">
                            {tech}
                          </span>
@@ -198,13 +201,18 @@ export default function Home() {
 
                    {/* Articles Published Section */}
                   <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all group">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 rounded-lg bg-blue-100">☁️</div>
-                      <h3 className="text-xl font-bold text-blue-600">Medium Articles</h3>
-                    </div>
-                      <a target="_blank" href={articles[currentArticle].link} className="text-lg text-blue-700 underline transition-opacity duration-500 ease-in-out">
-                        {articles[currentArticle].title}
-                      </a>
+                     <div className="flex items-center gap-3 mb-4">
+                       <div className="p-2 rounded-lg bg-purple-100">📊</div>
+                       <h3 className="text-xl font-bold text-blue-600">Data Engineering</h3>
+                     </div>
+                     <p className="text-gray-600">Latest trends and architecture patterns for building future-ready Data Lakes.</p>
+                     <div className="mt-4 flex flex-wrap gap-2">
+                       {['Debezium', 'Kafka Connect', 'Spark Streaming', 'Apache Hive', 'Trino', 'Streamlit'].map((tech) => (
+                         <span key={tech} className="px-3 py-1 text-sm rounded-full bg-purple-50 text-purple-700">
+                           {tech}
+                         </span>
+                       ))}
+                     </div>
                   </div>
 
         </motion.div>

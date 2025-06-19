@@ -1,67 +1,56 @@
+// footer.tsx
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
+    <footer className="border-t bg-gray-50 dark:bg-gray-950/50">
+      <div className="container mx-auto px-3 sm:px-2 lg:px-4client py-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
 
-      <footer className="row-start-3 flex gap-6 flex-wrap items-right justify-right">
 
-        <a>Powered by → </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_self"
-          rel="noopener noreferrer"
-        >
+          <div className="space-y-0">
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            © {new Date().getFullYear()} Mukesh Vast. All rights reserved.
+          </p>
+          </div>
 
-          <Image
-                className="dark:invert"
-                src="https://nextjs.org/icons/next.svg"
-                alt="Next.js"
-                width={50}
-                height={20}
-                priority
-              />
+          <div className="space-y-0">
+            <div className="flex items-center gap-6">
+            <h2 className="text-sm font-semibold text-gray-900 dark:text-white">
+              Powered By
+            </h2>
 
-        </a>
-
-        <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="https://www.docker.com/"
-              target="_self"
-              rel="noopener noreferrer"
-            >
-
-              <Image
+              {[
+                { src: 'https://www.svgrepo.com/download/354112/nextjs.svg', alt: 'Next.js', href: 'https://nextjs.org' },
+                { src: 'https://www.svgrepo.com/download/353661/docker.svg', alt: 'Docker', href: 'https://docker.com' },
+                { src: 'https://www.svgrepo.com/download/329901/amazonaws.svg', alt: 'AWS', href: 'https://aws.amazon.com' }
+              ].map((tech, index) => (
+                <a
+                  key={index}
+                  href={tech.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                >
+                  <Image
+                    src={tech.src}
+                    alt={tech.alt}
+                    width={40}
+                    height={40}
                     className="dark:invert"
-                    src="https://www.svgrepo.com/download/376365/docker.svg"
-                    alt="Docker"
-                    width={60}
-                    height={30}
-                    priority
                   />
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
 
-            </a>
 
-            <a
-              className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-              href="https://aws.amazon.com/"
-              target="_self"
-              rel="noopener noreferrer"
-            >
-
-              <Image
-                    className="dark:invert"
-                    src="https://www.svgrepo.com/download/329901/amazonaws.svg"
-                    alt="AWS"
-                    width={30}
-                    height={20}
-                    priority
-                  />
-
-            </a>
-
-      </footer>
-
+      </div>
+    </footer>
   );
 }
 

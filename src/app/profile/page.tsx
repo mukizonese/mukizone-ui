@@ -131,7 +131,11 @@ const certifications = [
 
 export default function ProfilePage() {
     return (
-        <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        /* <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8"> */
+            <div className="min-h-screen flex flex-col items-center justify-center px-6
+              bg-gradient-to-b from-blue-100 to-indigo-50 dark:from-gray-900 dark:to-gray-800
+              font-[family-name:var(--font-geist-sans)] transition-all duration-300"
+            >
             <header className="text-center mb-16">
                 <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
                     Senior Full Stack Engineer & Cloud Architect
