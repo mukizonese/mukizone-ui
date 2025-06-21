@@ -29,25 +29,7 @@ const itemAnimation = {
   visible: { opacity: 1, y: 0 }
 };
 
-const articles = [
-  { title: "Building a basic Trading application on AWS with Redis Cache", link: "https://medium.com/devops-dev/building-a-basic-trading-application-on-aws-with-redis-cache-f70648bc3779" },
-  { title: "Building a basic Tracker with Python FastAPI, PostgreSQL and Vite + React", link: "https://medium.com/@mukesh.vast/building-a-basic-tracker-with-python-fastapi-postgresql-and-vitejs-react-1154728b32e0" },
-  { title: "The Journey of Building a Tracker with OpenAI ChatGPT — A Developer’s Experience", link: "https://medium.com/@mukesh.vast/the-journey-of-building-a-tracker-with-openai-chatgpt-a-developers-experience-ead87ba55679" }
-
-];
-
-
 export default function Home() {
-
- const [currentArticle, setCurrentArticle] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentArticle((prev) => (prev + 1) % articles.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
 
   return (
     /* <div className="bg-gradient-to-b from-blue-100 to-indigo-50 font-[family-name:var(--font-geist-sans)]"> */
@@ -119,13 +101,13 @@ export default function Home() {
               variants={staggerItems}
               className="flex flex-wrap gap-4"
             >
-              {['Profile', 'TradeDemo', 'Blogs', 'Contacts'].map((btn, index) => (
+              {['TradeDemo', 'TradeAIChatDemo', 'Blogs'].map((btn, index) => (
                 <motion.a
                   key={index}
                   variants={itemAnimation}
                   whileHover={{
                     scale: 1.05,
-                    ...(btn === 'TradeDemo' && {
+                    ...(btn === 'TradeAIChatDemo' && {
                       boxShadow: "0 0 20px rgba(99, 102, 241, 0.5)",
                       border: "1px solid rgba(99, 102, 241, 0.8)"
                     })
@@ -133,18 +115,18 @@ export default function Home() {
                   whileTap={{ scale: 0.95 }}
                   href={btn.toLowerCase()}
                   className={`px-8 py-3 rounded-full shadow-md hover:shadow-lg transition-all font-medium
-                    ${btn === 'TradeDemo'
+                    ${btn === 'TradeAIChatDemo'
                       ? "text-white bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 border border-indigo-200"
                       : "bg-white text-blue-600 hover:text-white hover:bg-gradient-to-r from-blue-500 to-purple-500"}`}
                 >
                   {btn}
-                  {btn === 'TradeDemo' && (
+                  {btn === 'TradeAIChatDemo' && (
                     <span className="ml-2 animate-pulse">🚀</span>
                   )}
                 </motion.a>
+
               ))}
             </motion.div>
-
 
           </motion.div>
         </motion.div>
@@ -153,7 +135,7 @@ export default function Home() {
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          className="grid md:grid-cols-4 gap-8 mb-10"
+          className="grid md:grid-cols-5 gap-8 mb-10"
         >
                    <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all group">
                      <div className="flex items-center gap-3 mb-4">
@@ -184,6 +166,7 @@ export default function Home() {
                         ))}
                       </div>
                    </div>
+
                    <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all group">
                      <div className="flex items-center gap-3 mb-4">
                        <div className="p-2 rounded-lg bg-purple-100">🔍</div>
@@ -199,7 +182,6 @@ export default function Home() {
                      </div>
                    </div>
 
-                   {/* Articles Published Section */}
                   <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all group">
                      <div className="flex items-center gap-3 mb-4">
                        <div className="p-2 rounded-lg bg-purple-100">📊</div>
@@ -207,7 +189,22 @@ export default function Home() {
                      </div>
                      <p className="text-gray-600">Latest trends and architecture patterns for building future-ready Data Lakes.</p>
                      <div className="mt-4 flex flex-wrap gap-2">
-                       {['Debezium', 'Kafka Connect', 'Spark Streaming', 'Apache Hive', 'Trino', 'Streamlit'].map((tech) => (
+                       {['Kafka Connect', 'Apache Spark', 'Apache Hive'].map((tech) => (
+                         <span key={tech} className="px-3 py-1 text-sm rounded-full bg-purple-50 text-purple-700">
+                           {tech}
+                         </span>
+                       ))}
+                     </div>
+                  </div>
+
+                  <div className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all group">
+                     <div className="flex items-center gap-3 mb-4">
+                       <div className="p-2 rounded-lg bg-purple-100">🤖</div>
+                       <h3 className="text-xl font-bold text-blue-600">AI</h3>
+                     </div>
+                     <p className="text-gray-600">Dive into AI and LLMs.</p>
+                     <div className="mt-4 flex flex-wrap gap-2">
+                       {['LLM', 'RAG', 'Vector DB','Streamlit'].map((tech) => (
                          <span key={tech} className="px-3 py-1 text-sm rounded-full bg-purple-50 text-purple-700">
                            {tech}
                          </span>
