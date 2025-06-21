@@ -5,6 +5,14 @@ const articles = [
 
   {
     id: 1,
+    title: "🤖 Building a Trading AI Chatbot that thinks like a Trader",
+    link: "https://medium.com/gitconnected/building-a-trading-ai-chatbot-that-thinks-like-a-trader-d223649090eb",
+    description: "How I built a RAG-powered assistant that transforms historical trades into actionable insights — all running 100% locally with LangChain, ChromaDB, Ollama and Streamlit.",
+    date: "2025-05-20",
+    image: "/blogs-images/TradeBotDesgn.gif"
+  },
+  {
+    id: 2,
     title: "⚡ Automate Your Docker App Deployment on AWS EC2 with Packer, Terraform and S3",
     link: "https://medium.com/devops-dev/from-zero-to-live-in-minutes-automate-your-docker-app-deployment-on-aws-ec2-with-packer-1a67294882cd",
     description: "Turn tedious AWS provisioning into a one-command magic trick using Packer, Terraform, S3 and Docker.",
@@ -12,7 +20,7 @@ const articles = [
     image: "/blogs-images/Create_AMI.png"
   },
   {
-    id: 2,
+    id: 3,
     title: "🌊 Building a Scalable and Open-Source Data Lake End to End Architecture",
     link: "https://levelup.gitconnected.com/building-a-scalable-and-open-source-data-lake-end-to-end-architecture-235ba920084e",
     description: "Learn how to build an enterprise-grade Data Lake using open-source tools like Apache Kafka, Spark, and MinIO.",
@@ -20,7 +28,7 @@ const articles = [
     image: "/blogs-images/End-to-End Data Lake Architecture Flow.gif"
   },
   {
-    id: 3,
+    id: 4,
     title: "📊 Data Lake Architectures 2025",
     link: "https://medium.com/@mukesh.vast/data-lake-architectures-2025-a735f6c6cdae",
     description: "Explore the latest trends, best practices, and architecture patterns for building future-ready Data Lakes.",
@@ -28,7 +36,7 @@ const articles = [
     image: "/blogs-images/Modern Data Lake Architecture.png"
   },
   {
-    id: 4,
+    id: 5,
     title: "📈 Building a Trading App on AWS with Redis Cache",
     link: "https://medium.com/devops-dev/building-a-basic-trading-application-on-aws-with-redis-cache-f70648bc3779",
     description: "A scalable and efficient trading app built on AWS with Redis.",
@@ -36,7 +44,7 @@ const articles = [
     image: "/blogs-images/demotrade.gif"
   },
   {
-    id: 5,
+    id: 6,
     title: "⚡ FastAPI + React: Build a High-Performance Tracker",
     link: "https://medium.com/@mukesh.vast/building-a-basic-tracker-with-python-fastapi-postgresql-and-vitejs-react-1154728b32e0",
     description: "A step-by-step guide to building a powerful tracker app.",
@@ -44,7 +52,7 @@ const articles = [
     image: "/blogs-images/FastAPI.gif"
   },
   {
-    id: 6,
+    id: 7,
     title: "🤖 AI-Powered Tracker with OpenAI ChatGPT",
     link: "https://medium.com/@mukesh.vast/the-journey-of-building-a-tracker-with-openai-chatgpt-a-developers-experience-ead87ba55679",
     description: "A Developer’s Experience exploring AI-powered automation with OpenAI and ChatGPT.",
